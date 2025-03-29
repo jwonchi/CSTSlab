@@ -1,1 +1,573 @@
-<h1> CSTS 연구소에 오신 여러분을 환영합니다. </h1>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSTS 자격증 시험 정보, 기출문제, 키워드 퀴즈 제공 사이트">
+    <meta name="keywords" content="CSTS, CSTS 자격증, CSTS 기출문제, CSTS 시험, CSTS 퀴즈, CSTS 키워드">
+    <meta name="author" content="Your Name">
+    <title>CSTS 자격증 정보 및 기출문제 | 합격을 위한 모든 정보</title>
+    
+    <!-- 파비콘 -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- 폰트 추가 (네이버 나눔 고딕) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* 기본 스타일 */
+        :root {
+            --primary-color: #3b5998;
+            --secondary-color: #8b9dc3;
+            --accent-color: #dfe3ee;
+            --text-color: #333;
+            --light-text: #fff;
+            --background-color: #f7f7f7;
+            --card-background: #fff;
+            --border-color: #ddd;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nanum Gothic', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* 헤더 */
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+        }
+        
+        /* 네비게이션 */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            font-weight: 600;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav ul li a:hover, nav ul li a.active {
+            background-color: var(--secondary-color);
+        }
+        
+        /* 모바일 메뉴 버튼 */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light-text);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* 메인 콘텐츠 */
+        main {
+            padding: 2rem 0;
+        }
+        
+        .hero {
+            background-color: var(--secondary-color);
+            color: var(--light-text);
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* 카드 섹션 */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .card {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-content h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .card-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* 푸터 */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--secondary-color);
+            padding-top: 1.5rem;
+        }
+        
+        /* 반응형 스타일 */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                right: 15px;
+                top: 15px;
+            }
+            
+            nav {
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            
+            nav.active {
+                max-height: 300px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 0.8rem 0;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+        
+        /* 내부 페이지 스타일 */
+        .page-header {
+            background-color: var(--secondary-color);
+            color: var(--light-text);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .page-content {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        /* CSTS 정보 페이지 스타일 */
+        .info-section {
+            margin-bottom: 2rem;
+        }
+        
+        .info-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        /* CSTS 기출문제 페이지 스타일 */
+        .exam-list {
+            list-style: none;
+        }
+        
+        .exam-item {
+            background-color: var(--accent-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .exam-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .exam-item h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .exam-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* CSTS 키워드 퀴즈 페이지 스타일 */
+        .quiz-container {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .quiz-question {
+            margin-bottom: 2rem;
+        }
+        
+        .quiz-options {
+            list-style: none;
+        }
+        
+        .quiz-option {
+            background-color: var(--accent-color);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .quiz-option:hover {
+            background-color: var(--secondary-color);
+            color: var(--light-text);
+        }
+        
+        .quiz-option.correct {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .quiz-option.incorrect {
+            background-color: #F44336;
+            color: white;
+        }
+        
+        .quiz-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        
+        .quiz-button {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .quiz-button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .quiz-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1><i class="fas fa-certificate"></i> CSTS 자격증</h1>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">홈</a></li>
+                    <li><a href="info.html">CSTS 정보</a></li>
+                    <li><a href="exam.html">CSTS 기출문제</a></li>
+                    <li><a href="quiz.html">CSTS 키워드 Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- 메인 콘텐츠 -->
+    <main>
+        <div class="container">
+            <!-- 히어로 섹션 -->
+            <section class="hero">
+                <h2>CSTS 자격증 합격을 위한 모든 것</h2>
+                <p>최신 기출문제, 핵심 정보, 퀴즈로 CSTS 자격증 시험을 준비하세요.</p>
+                <a href="exam.html" class="cta-button">기출문제 풀어보기</a>
+            </section>
+            
+            <!-- 카드 섹션 -->
+            <section class="cards">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/api/placeholder/400/250" alt="CSTS 정보">
+                    </div>
+                    <div class="card-content">
+                        <h3>CSTS 자격증 정보</h3>
+                        <p>CSTS 자격증의 개요, 응시자격, 시험일정, 합격기준 등 필수 정보를 확인하세요.</p>
+                        <a href="info.html" class="cta-button">자세히 보기</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/api/placeholder/400/250" alt="CSTS 기출문제">
+                    </div>
+                    <div class="card-content">
+                        <h3>CSTS 기출문제</h3>
+                        <p>최신 CSTS 기출문제와 상세한 해설로 실전 감각을 키우고 핵심 개념을 이해하세요.</p>
+                        <a href="exam.html" class="cta-button">문제 풀기</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/api/placeholder/400/250" alt="CSTS 키워드 퀴즈">
+                    </div>
+                    <div class="card-content">
+                        <h3>CSTS 키워드 Quiz</h3>
+                        <p>CSTS 핵심 키워드를 퀴즈 형식으로 학습하여 중요 개념을 빠르게 익히세요.</p>
+                        <a href="quiz.html" class="cta-button">퀴즈 시작하기</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CSTS 자격증</h3>
+                    <p>CSTS 자격증 취득을 위한 최고의 학습 리소스를 제공합니다.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>빠른 링크</h3>
+                    <ul>
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="info.html">CSTS 정보</a></li>
+                        <li><a href="exam.html">CSTS 기출문제</a></li>
+                        <li><a href="quiz.html">CSTS 키워드 Quiz</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>연락처</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@csts-exam.com</li>
+                        <li><i class="fas fa-phone"></i> 02-123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 서울특별시 강남구</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 CSTS 자격증 정보 사이트. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 자바스크립트 -->
+    <script>
+        // 모바일 메뉴 토글
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+        
+        // 스크롤 이벤트
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.querySelector('header').style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                document.querySelector('header').style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
