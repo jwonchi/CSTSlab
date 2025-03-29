@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <!-- 배경 -->
+  <rect width="400" height="250" fill="#f5f7fa"/>
+  
+  <!-- 상단 장식 -->
+  <rect width="400" height="10" fill="#074F57"/>
+  
+  <!-- 중앙 아이콘 배경 -->
+  <circle cx="200" cy="105" r="55" fill="#01baef" opacity="0.2"/>
+  
+  <!-- 퀴즈 아이콘 - 전구와 물음표 -->
+  <g transform="translate(150, 55) scale(0.9)">
+    <!-- 전구 -->
+    <path d="M75,30 Q75,10 100,10 Q125,10 125,30 Q125,50 115,60 L115,80 L85,80 L85,60 Q75,50 75,30" fill="#FFD700" stroke="#E6C700" stroke-width="2"/>
+    <rect x="88" y="80" width="24" height="10" rx="2" fill="#FFD700" stroke="#E6C700" stroke-width="2"/>
+    <line x1="95" y1="30" x2="105" y2="30" stroke="#E6C700" stroke-width="2"/>
+    <line x1="95" y1="40" x2="105" y2="40" stroke="#E6C700" stroke-width="2"/>
+    <line x1="95" y1="50" x2="105" y2="50" stroke="#E6C700" stroke-width="2"/>
+    
+    <!-- 물음표 아이콘 -->
+    <circle cx="50" cy="50" r="30" fill="#074F57"/>
+    <text x="50" y="65" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="white">?</text>
+  </g>
+  
+  <!-- 텍스트 -->
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#074F57">CSTS 키워드 퀴즈</text>
+  <text x="200" y="205" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">핵심 개념 학습 및 테스트</text>
+  
+  <!-- 하단 장식 -->
+  <rect y="240" width="400" height="10" fill="#01baef"/>
+</svg>

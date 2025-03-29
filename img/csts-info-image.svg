@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <!-- 배경 -->
+  <rect width="400" height="250" fill="#f5f7fa"/>
+  
+  <!-- 상단 장식 -->
+  <rect width="400" height="10" fill="#074F57"/>
+  
+  <!-- 중앙 아이콘 배경 -->
+  <circle cx="200" cy="105" r="55" fill="#01baef" opacity="0.2"/>
+  
+  <!-- 테스트 아이콘 - 문서와 체크 표시 -->
+  <g transform="translate(160, 65) scale(0.9)">
+    <!-- 문서 -->
+    <rect x="10" y="10" width="70" height="90" rx="4" fill="white" stroke="#074F57" stroke-width="3"/>
+    <line x1="25" y1="35" x2="65" y2="35" stroke="#074F57" stroke-width="3"/>
+    <line x1="25" y1="55" x2="65" y2="55" stroke="#074F57" stroke-width="3"/>
+    <line x1="25" y1="75" x2="55" y2="75" stroke="#074F57" stroke-width="3"/>
+    
+    <!-- 체크 표시 -->
+    <circle cx="90" cy="75" r="25" fill="#01baef"/>
+    <path d="M80,75 L85,82 L100,65" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- 텍스트 -->
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#074F57">CSTS 자격증 정보</text>
+  <text x="200" y="205" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">소프트웨어 테스트 전문가 자격 가이드</text>
+  
+  <!-- 하단 장식 -->
+  <rect y="240" width="400" height="10" fill="#01baef"/>
+</svg>

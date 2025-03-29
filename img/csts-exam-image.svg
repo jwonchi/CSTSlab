@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <!-- 배경 -->
+  <rect width="400" height="250" fill="#f5f7fa"/>
+  
+  <!-- 상단 장식 -->
+  <rect width="400" height="10" fill="#074F57"/>
+  
+  <!-- 중앙 아이콘 배경 -->
+  <circle cx="200" cy="105" r="55" fill="#01baef" opacity="0.2"/>
+  
+  <!-- 시험지와 연필 아이콘 -->
+  <g transform="translate(140, 65) scale(0.9)">
+    <!-- 시험지 -->
+    <rect x="20" y="0" width="80" height="100" rx="4" fill="white" stroke="#074F57" stroke-width="3"/>
+    <line x1="35" y1="20" x2="85" y2="20" stroke="#074F57" stroke-width="2"/>
+    <line x1="35" y1="40" x2="85" y2="40" stroke="#074F57" stroke-width="2"/>
+    <line x1="35" y1="60" x2="85" y2="60" stroke="#074F57" stroke-width="2"/>
+    <line x1="35" y1="80" x2="85" y2="80" stroke="#074F57" stroke-width="2"/>
+    
+    <!-- 선택 박스 -->
+    <rect x="25" y="15" width="8" height="8" fill="#01baef"/>
+    <rect x="25" y="35" width="8" height="8" fill="white" stroke="#074F57"/>
+    <rect x="25" y="55" width="8" height="8" fill="white" stroke="#074F57"/>
+    <rect x="25" y="75" width="8" height="8" fill="white" stroke="#074F57"/>
+    
+    <!-- 연필 - 수정된 버전 -->
+    <g transform="translate(110, 20) rotate(15)">
+      <!-- 연필 몸통 -->
+      <rect x="0" y="0" width="10" height="65" fill="#FFCE9E" rx="1" ry="1"/>
+      <!-- 연필 끝부분 (지우개) -->
+      <rect x="0" y="-10" width="10" height="10" fill="#FF9E9E" rx="1" ry="1"/>
+      <!-- 연필 중간 금속 부분 -->
+      <rect x="0" y="-3" width="10" height="3" fill="#A0A0A0"/>
+      <!-- 연필 날카로운 끝 -->
+      <polygon points="0,65 5,80 10,65" fill="#7B3F00"/>
+      <!-- 연필 심 -->
+      <rect x="4" y="65" width="2" height="13" fill="#333"/>
+    </g>
+  </g>
+  
+  <!-- 텍스트 -->
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#074F57">CSTS 기출문제</text>
+  <text x="200" y="205" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">실전 대비 기출문제 분석</text>
+  
+  <!-- 하단 장식 -->
+  <rect y="240" width="400" height="10" fill="#01baef"/>
+</svg>
